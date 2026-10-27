@@ -1,0 +1,268 @@
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #f0ecd8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === Header === */
+.site-header {
+  padding: 20px 0 10px;
+}
+
+.header-inner {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 42px;
+  font-style: italic;
+  font-weight: bold;
+  color: #6b7b3a;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #6b7b3a;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #4a5a28;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-auth {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 2px solid #333;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.btn-auth:hover {
+  background-color: #6b7b3a;
+  border-color: #6b7b3a;
+  color: #fff;
+}
+
+/* === Navigation === */
+.main-nav {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  background-color: #7b8c3e;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.main-nav li {
+  flex: 1;
+}
+
+.main-nav a {
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.main-nav a:hover {
+  background-color: #6b7b3a;
+}
+
+/* === Hero === */
+.hero {
+  max-width: 940px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.hero img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* === Main Content === */
+.content {
+  max-width: 940px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* === Section Title === */
+.section-title {
+  background-color: #7b8c3e;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* === Vegetables Section === */
+.veggie-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.veggie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.veggie-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.veggie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.veggie-img:hover img {
+  transform: scale(1.05);
+}
+
+.veggie-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* === Contact Section === */
+.contact-content {
+  padding: 0;
+}
+
+.contact-text p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.contact-divider {
+  border: none;
+  border-top: 1px solid #999;
+  margin: 16px 0;
+}
+
+.contact-info p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: #7b8c3e;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: auto;
+}
+
+.site-footer p {
+  color: #d4dbb5;
+  font-size: 14px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .main-nav li {
+    flex: 1 1 auto;
+    min-width: 50%;
+  }
+
+  .veggie-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    height: 200px;
+  }
+}
